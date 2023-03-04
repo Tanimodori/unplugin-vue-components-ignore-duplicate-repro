@@ -1,3 +1,3 @@
 <template>
-  <a-input />
+  <c-async />
 </template>

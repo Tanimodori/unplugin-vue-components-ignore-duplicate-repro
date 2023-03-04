@@ -1,3 +1,3 @@
 <template>
-  <a-badge />
+  <c-sync />
 </template>

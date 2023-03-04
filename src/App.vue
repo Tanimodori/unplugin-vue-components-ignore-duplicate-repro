@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import HelloWorld from "./components/HelloWorld.vue";
 import TheWelcome from "./components/TheWelcome.vue";
+import DuplicateNameSyncA from "./components/viewA/DuplicateNameSync.vue";
+import DuplicateNameSyncB from "./components/viewB/DuplicateNameSync.vue";
+import DuplicateNameSyncC from "./components/viewC/DuplicateNameSync.vue";
 
 const components = [
-  () => import("./components/viewA/DuplicateName.vue"),
-  () => import("./components/viewB/DuplicateName.vue"),
-  () => import("./components/viewC/DuplicateName.vue"),
+  () => import("./components/viewA/DuplicateNameAsync.vue"),
+  () => import("./components/viewB/DuplicateNameAsync.vue"),
+  () => import("./components/viewC/DuplicateNameAsync.vue"),
+  () => import("./components/viewA/NormalNameAsync.vue"),
 ];
 
 console.log(components);
@@ -23,6 +27,11 @@ console.log(components);
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
+      <template v-if="false">
+        <DuplicateNameSyncA />
+        <DuplicateNameSyncB />
+        <DuplicateNameSyncC />
+      </template>
     </div>
   </header>
 
