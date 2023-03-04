@@ -10,9 +10,15 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     App: typeof import('./src/App.vue')['default']
+    AViewAsync: typeof import('./src/components/AView/AViewAsync.vue')['default']
+    AViewSync: typeof import('./src/components/AView/AViewSync.vue')['default']
     BarComponent: typeof import('./src/components/dummy/BarComponent.vue')['default']
     BazComponent: typeof import('./src/components/dummy/BazComponent.vue')['default']
+    BViewAsync: typeof import('./src/components/BView/BViewAsync.vue')['default']
+    BViewSync: typeof import('./src/components/BView/BViewSync.vue')['default']
     copy: typeof import('./src/components/viewA/DuplicateName copy.vue')['default']
+    CViewAsync: typeof import('./src/components/CView/CViewAsync.vue')['default']
+    CViewSync: typeof import('./src/components/CView/CViewSync.vue')['default']
     DuplicateName: typeof import('./src/components/viewC/DuplicateName.vue')['default']
     DuplicateNameAsync: typeof import('./src/components/viewA/DuplicateNameAsync.vue')['default']
     DuplicateNameSync: typeof import('./src/components/viewA/DuplicateNameSync.vue')['default']

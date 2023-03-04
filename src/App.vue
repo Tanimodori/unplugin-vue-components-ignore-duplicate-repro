@@ -1,18 +1,23 @@
 <script setup lang="ts">
 import HelloWorld from "./components/HelloWorld.vue";
 import TheWelcome from "./components/TheWelcome.vue";
-import DuplicateNameSyncA from "./components/viewA/DuplicateNameSync.vue";
-import DuplicateNameSyncB from "./components/viewB/DuplicateNameSync.vue";
-import DuplicateNameSyncC from "./components/viewC/DuplicateNameSync.vue";
+import AViewSync from "./components/AView/AViewSync.vue";
+import BViewSync from "./components/BView/BViewSync.vue";
+import CViewSync from "./components/CView/CViewSync.vue";
 
 const components = [
-  () => import("./components/viewA/DuplicateNameAsync.vue"),
-  () => import("./components/viewB/DuplicateNameAsync.vue"),
-  () => import("./components/viewC/DuplicateNameAsync.vue"),
-  () => import("./components/viewA/NormalNameAsync.vue"),
+  () => import("./components/AView/AViewAsync.vue"),
+  () => import("./components/BView/BViewAsync.vue"),
+  () => import("./components/CView/CViewAsync.vue"),
 ];
 
-console.log(components);
+let i = 0;
+setInterval(() => {
+  if (i < components.length) {
+    components[i]();
+    ++i;
+  }
+}, 1000);
 </script>
 
 <template>
@@ -28,9 +33,9 @@ console.log(components);
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
       <template v-if="false">
-        <DuplicateNameSyncA />
-        <DuplicateNameSyncB />
-        <DuplicateNameSyncC />
+        <AViewSync />
+        <BViewSync />
+        <CViewSync />
       </template>
     </div>
   </header>

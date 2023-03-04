@@ -22,7 +22,7 @@ export default defineConfig({
       ],
       globs: ["src/components/**/*.vue", "src/App.vue"],
       importPathTransform: (path: string) => {
-        if (path.endsWith(".vue")) {
+        if (path.endsWith("ync.vue")) {
           console.log("Path: ", path);
         }
         return path;
