@@ -17,7 +17,7 @@ export default defineConfig({
           type: "component",
           resolve: (name: string) => {
             console.log("Name: ", name);
-            if (name.endsWith("View") || name.endsWith("ViewItem")) {
+            if (name.endsWith("ViewItemComponents")) {
               return {
                 from: "@arco-design/web-vue",
                 name: "Input",
