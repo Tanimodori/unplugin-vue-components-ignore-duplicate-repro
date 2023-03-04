@@ -10,12 +10,16 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     App: typeof import('./src/App.vue')['default']
+    ASync: typeof import('./src/components/Dummy.vue')['default']
     AViewAsync: typeof import('./src/components/AView/AViewAsync.vue')['default']
     AViewSync: typeof import('./src/components/AView/AViewSync.vue')['default']
+    BSync: typeof import('./src/components/Dummy.vue')['default']
     BViewAsync: typeof import('./src/components/BView/BViewAsync.vue')['default']
     BViewSync: typeof import('./src/components/BView/BViewSync.vue')['default']
+    CSync: typeof import('./src/components/Dummy.vue')['default']
     CViewAsync: typeof import('./src/components/CView/CViewAsync.vue')['default']
     CViewSync: typeof import('./src/components/CView/CViewSync.vue')['default']
+    Dummy: typeof import('./src/components/Dummy.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./src/components/icons/IconDocumentation.vue')['default']
