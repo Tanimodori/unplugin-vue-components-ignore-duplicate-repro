@@ -13,13 +13,13 @@ export default defineConfig({
     Components({
       resolvers: [
         (name: string) => {
-          console.log("Searching for name: ", name);
+          console.log("Name: ", name);
         },
       ],
       globs: ["src/components/**/*.vue", "src/App.vue"],
       importPathTransform: (path: string) => {
         if (path.endsWith(".vue")) {
-          console.log("Searching for path: ", path);
+          console.log("Path: ", path);
         }
         return path;
       },
