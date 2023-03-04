@@ -5,16 +5,6 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 
-let i = 0;
-const components: Record<string, string> = {
-  AAsync: "Affix",
-  ASync: "Avatar",
-  BAsync: "Badge",
-  BSync: "Breadcrumb",
-  CAsync: "BreadcrumbItem",
-  CSync: "Button",
-};
-
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -27,11 +17,10 @@ export default defineConfig({
           type: "component",
           resolve: (name: string) => {
             console.log("Name: ", name);
-            if (name.endsWith("ync")) {
-              ++i;
+            if (name.endsWith("View") || name.endsWith("ViewItem")) {
               return {
                 from: "@arco-design/web-vue",
-                name: components[name],
+                name: "Input",
               };
             }
           },
@@ -39,7 +28,7 @@ export default defineConfig({
       ],
       globs: ["src/components/**/*.vue", "src/App.vue"],
       importPathTransform: (path: string) => {
-        if (path.endsWith("ync.vue")) {
+        if (path.endsWith("View.vue") || path.endsWith("ViewItem.vue")) {
           console.log("Path: ", path);
         }
         return path;

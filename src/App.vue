@@ -1,23 +1,11 @@
 <script setup lang="ts">
 import HelloWorld from "./components/HelloWorld.vue";
 import TheWelcome from "./components/TheWelcome.vue";
-import AViewSync from "./components/AView/AViewSync.vue";
-import BViewSync from "./components/BView/BViewSync.vue";
-import CViewSync from "./components/CView/CViewSync.vue";
+import SyncView from "./components/view/SyncView.vue";
 
-const components = [
-  () => import("./components/AView/AViewAsync.vue"),
-  () => import("./components/BView/BViewAsync.vue"),
-  () => import("./components/CView/CViewAsync.vue"),
-];
+const components = [() => import("./components/view/AsyncView.vue")];
 
-let i = 0;
-setInterval(() => {
-  if (i < components.length) {
-    components[i]();
-    ++i;
-  }
-}, 20000);
+console.log(components);
 </script>
 
 <template>
@@ -32,11 +20,7 @@ setInterval(() => {
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
-      <template v-if="false">
-        <AViewSync />
-        <BViewSync />
-        <CViewSync />
-      </template>
+      <SyncView />
     </div>
   </header>
 

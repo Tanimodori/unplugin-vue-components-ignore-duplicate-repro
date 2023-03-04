@@ -1,3 +1,3 @@
 <template>
-  <b-async />
+  <sync-view-item />
 </template>

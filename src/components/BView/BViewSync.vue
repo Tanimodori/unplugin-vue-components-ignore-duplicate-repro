@@ -1,3 +1,0 @@
-<template>
-  <b-sync />
-</template>

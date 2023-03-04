@@ -1,3 +1,3 @@
 <template>
-  <c-sync />
+  <async-view-item />
 </template>
