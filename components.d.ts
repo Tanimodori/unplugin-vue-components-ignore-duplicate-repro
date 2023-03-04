@@ -9,10 +9,11 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    ABadge: typeof import('@arco-design/web-vue')['Badge']
+    ADescriptions: typeof import('@arco-design/web-vue')['Descriptions']
     App: typeof import('./src/App.vue')['default']
     AsyncView: typeof import('./src/components/view/AsyncView.vue')['default']
     AsyncViewItem: typeof import('./src/components/view/AsyncViewItem.vue')['default']
-    AsyncViewItemComponents: typeof import('@arco-design/web-vue')['Input']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./src/components/icons/IconDocumentation.vue')['default']
@@ -21,7 +22,6 @@ declare module '@vue/runtime-core' {
     IconTooling: typeof import('./src/components/icons/IconTooling.vue')['default']
     SyncView: typeof import('./src/components/view/SyncView.vue')['default']
     SyncViewItem: typeof import('./src/components/view/SyncViewItem.vue')['default']
-    SyncViewItemComponents: typeof import('@arco-design/web-vue')['Input']
     TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
   }

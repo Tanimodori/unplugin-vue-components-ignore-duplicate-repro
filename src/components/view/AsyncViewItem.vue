@@ -1,3 +1,3 @@
 <template>
-  <async-view-item-components />
+  <a-badge />
 </template>

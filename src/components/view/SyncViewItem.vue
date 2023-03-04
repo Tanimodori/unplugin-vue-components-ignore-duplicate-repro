@@ -1,3 +1,3 @@
 <template>
-  <sync-view-item-components />
+  <a-descriptions />
 </template>

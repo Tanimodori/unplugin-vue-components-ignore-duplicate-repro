@@ -1,5 +1,6 @@
 import { fileURLToPath, URL } from "node:url";
 import Components from "unplugin-vue-components/vite";
+import { ArcoResolver } from "unplugin-vue-components/resolvers";
 
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
@@ -13,18 +14,10 @@ export default defineConfig({
     Components({
       dts: true,
       resolvers: [
-        {
-          type: "component",
-          resolve: (name: string) => {
-            console.log("Name: ", name);
-            if (name.endsWith("ViewItemComponents")) {
-              return {
-                from: "@arco-design/web-vue",
-                name: "Input",
-              };
-            }
-          },
+        (name: string) => {
+          console.log("Name: ", name);
         },
+        ArcoResolver(),
       ],
       globs: ["src/components/**/*.vue", "src/App.vue"],
       importPathTransform: (path: string) => {
