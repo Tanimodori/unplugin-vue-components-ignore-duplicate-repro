@@ -9,17 +9,17 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    AAsync: typeof import('@arco-design/web-vue')['Input']
+    AAsync: typeof import('@arco-design/web-vue')['Badge']
     App: typeof import('./src/App.vue')['default']
-    ASync: typeof import('@arco-design/web-vue')['Input']
+    ASync: typeof import('@arco-design/web-vue')['Breadcrumb']
     AViewAsync: typeof import('./src/components/AView/AViewAsync.vue')['default']
     AViewSync: typeof import('./src/components/AView/AViewSync.vue')['default']
-    BAsync: typeof import('@arco-design/web-vue')['Input']
-    BSync: typeof import('@arco-design/web-vue')['Input']
+    BAsync: typeof import('@arco-design/web-vue')['Button']
+    BSync: typeof import('@arco-design/web-vue')['Avatar']
     BViewAsync: typeof import('./src/components/BView/BViewAsync.vue')['default']
     BViewSync: typeof import('./src/components/BView/BViewSync.vue')['default']
-    CAsync: typeof import('@arco-design/web-vue')['Input']
-    CSync: typeof import('@arco-design/web-vue')['Input']
+    CAsync: typeof import('@arco-design/web-vue')['Affix']
+    CSync: typeof import('@arco-design/web-vue')['BreadcrumbItem']
     CViewAsync: typeof import('./src/components/CView/CViewAsync.vue')['default']
     CViewSync: typeof import('./src/components/CView/CViewSync.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']

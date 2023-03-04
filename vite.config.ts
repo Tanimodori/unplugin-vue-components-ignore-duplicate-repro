@@ -4,7 +4,16 @@ import Components from "unplugin-vue-components/vite";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
-import { resolve } from "node:path";
+
+let i = 0;
+const components = [
+  "Affix",
+  "Avatar",
+  "Badge",
+  "Breadcrumb",
+  "BreadcrumbItem",
+  "Button",
+];
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,9 +28,10 @@ export default defineConfig({
           resolve: (name: string) => {
             console.log("Name: ", name);
             if (name.endsWith("ync")) {
+              ++i;
               return {
                 from: "@arco-design/web-vue",
-                name: "Input",
+                name: components[i % components.length],
               };
             }
           },
