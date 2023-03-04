@@ -6,14 +6,14 @@ import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 
 let i = 0;
-const components = [
-  "Affix",
-  "Avatar",
-  "Badge",
-  "Breadcrumb",
-  "BreadcrumbItem",
-  "Button",
-];
+const components: Record<string, string> = {
+  AAsync: "Affix",
+  ASync: "Avatar",
+  BAsync: "Badge",
+  BSync: "Breadcrumb",
+  CAsync: "BreadcrumbItem",
+  CSync: "Button",
+};
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -31,7 +31,7 @@ export default defineConfig({
               ++i;
               return {
                 from: "@arco-design/web-vue",
-                name: components[i % components.length],
+                name: components[name],
               };
             }
           },
