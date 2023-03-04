@@ -20,8 +20,8 @@ export default defineConfig({
             console.log("Name: ", name);
             if (name.endsWith("ync")) {
               return {
-                from: resolve(__dirname, "./src/components/Dummy.vue"),
-                name: "default",
+                from: "@arco-design/web-vue",
+                name: "Input",
               };
             }
           },

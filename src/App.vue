@@ -4,7 +4,6 @@ import TheWelcome from "./components/TheWelcome.vue";
 import AViewSync from "./components/AView/AViewSync.vue";
 import BViewSync from "./components/BView/BViewSync.vue";
 import CViewSync from "./components/CView/CViewSync.vue";
-import "./components/Dummy.vue";
 
 const components = [
   () => import("./components/AView/AViewAsync.vue"),
