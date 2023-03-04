@@ -11,9 +11,13 @@ export default defineConfig({
     vue(),
     vueJsx(),
     Components({
+      dts: true,
       resolvers: [
-        (name: string) => {
-          console.log("Name: ", name);
+        {
+          type: "component",
+          resolve: (name: string) => {
+            console.log("Name: ", name);
+          },
         },
       ],
       globs: ["src/components/**/*.vue", "src/App.vue"],

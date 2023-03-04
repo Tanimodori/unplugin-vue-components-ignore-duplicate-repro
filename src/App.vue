@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import HelloWorld from "./components/HelloWorld.vue";
 import TheWelcome from "./components/TheWelcome.vue";
-import DuplicateNameA from "./components/viewA/DuplicateName.vue";
-import DuplicateNameB from "./components/viewB/DuplicateName.vue";
-import NormalName from "./components/viewC/NormalName.vue";
+
+const components = [
+  () => import("./components/viewA/DuplicateName.vue"),
+  () => import("./components/viewB/DuplicateName.vue"),
+  () => import("./components/viewC/DuplicateName.vue"),
+];
+
+console.log(components);
 </script>
 
 <template>
@@ -18,9 +23,6 @@ import NormalName from "./components/viewC/NormalName.vue";
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
-      <DuplicateNameA />
-      <DuplicateNameB />
-      <NormalName />
     </div>
   </header>
 

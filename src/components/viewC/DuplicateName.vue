@@ -1,3 +1,3 @@
 <template>
-  <BazComponent />
+  <a-input />
 </template>

@@ -1,3 +1,3 @@
 <template>
-  <FooComponent />
+  <a-badge />
 </template>
