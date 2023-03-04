@@ -17,7 +17,7 @@ setInterval(() => {
     components[i]();
     ++i;
   }
-}, 1000);
+}, 20000);
 </script>
 
 <template>
